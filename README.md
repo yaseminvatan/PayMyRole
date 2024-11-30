@@ -1,125 +1,89 @@
-# 03 JavaScript: Employee Payroll Tracker
+# Employee Payroll Tracker
 
-## Your Task
+This is a browser-based application designed to help payroll managers track employee payroll data, calculate average salaries, and display employee rosters. The interface is clean and responsive, providing an intuitive user experience.
 
-This week's Challenge requires you to modify starter code to create an application that enables a payroll manager to view and manage employee payroll data. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+---
 
-## User Story
+## Table of Contents
 
-```md
-AS A payroll manager
-I WANT AN employee payroll tracker
-SO THAT I can see my employees' payroll data and properly budget for the company
-```
+- [Description](#description)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [How to Use](#how-to-use)
+- [Live Demo](#live-demo)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-## Acceptance Criteria
+---
 
-```md
-GIVEN an employee payroll tracker
-WHEN I click the "Add employee" button
-THEN I am presented with a series of prompts asking for first name, last name, and salary
-WHEN I finish adding an employee
-THEN I am prompted to continue or cancel
-WHEN I choose to continue
-THEN I am prompted to add a new employee
-WHEN I choose to cancel
-THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
-```
+## Description
 
-## Mock-Up
+The **Employee Payroll Tracker** allows payroll managers to:
+1. Add employee data (first name, last name, and salary).
+2. View employee data displayed in an HTML table.
+3. Calculate and display the average salary of employees.
+4. Select and display a random employee.
 
-The following images show the web application's appearance and functionality:
+---
 
-![Animation shows input of employees to an employee payroll tracker.](./Assets/03-javascript-homework-demo.gif)
+## Features
 
-![Shows employee information in the console of an employee payroll tracker.](./Assets/03-javascript-homework-console-demo.png)
+- **Dynamic Employee Management**: Add multiple employees with an interactive prompt.
+- **Data Display**: Employee data is displayed in a clean HTML table.
+- **Average Salary Calculation**: Automatically calculates the average salary and logs it to the console.
+- **Random Employee Selector**: Randomly selects and displays an employee from the roster.
+- **Responsive Design**: Adapts to different screen sizes for seamless usage.
 
-## Getting Started
+---
 
-You will be responsible for filling out the following functions:
+## Technologies Used
 
-* `collectEmployees`: This function will allow a user to add multiple employees to display on the page.  The user will need to enter the first name, last name, and salary of each employee, then have the option to keep adding employees until they choose to stop. A `while` loop will be needed here ([MDN Web Docs on `while` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)) The salary will need to be entered as a number, otherwise it should default to $0.  The `isNaN` function can help with this: ([MDN Web Docs on isNaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN)) This function should return an array of objects, like the following example.  Reference the [MDN Web Docs on return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return):
+- **HTML5**: For the structure of the application.
+- **CSS3**: For responsive design and styling.
+- **JavaScript**: For dynamic data handling and interactivity.
 
-```javascript
-    [
-        {
-            firstName:"John",
-            lastName:"Smith",
-            salary:12345
-        },
-        {
-            firstName:"Jane",
-            lastName:"Doe",
-            salary:54321
-        }
-    ]
-```
+---
 
-* `displayAverageSalary`: This function will take in the generated array of employees and log the average salary and number of employees to the console.  You should use a template literal string for this task.
+## How to Use
 
-* `getRandomEmployee`: This function will take in the generated array of employees, randomly select one employee, and use a template literal to log their full name to the console.  The built in `Math` object can help with random number generation: ([MDN Web Docs on `Math.random`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random))
+1. Open the application in your browser.
+2. Click on the **"Add Employees"** button.
+3. Follow the prompts to enter the employee's:
+   - First Name
+   - Last Name
+   - Salary
+4. Confirm if you want to add another employee or stop.
+5. View the sorted employee list on the page, and check the average salary and random employee details in the console.
 
-The provided starter code includes the `displayEmployees` and `trackEmployeeData` functions. These functions are complete and working. You do not have to modify any code for the following functions:
+---
 
-* `displayEmployees`: This function will take in an array of employees and render each employee to an HTML table.
+## Live Demo
 
-* `trackEmployeeData`: This function will execute when the "Add Employees" button is clicked. It will take the array generated in your `collectEmployees` function, sort the employees by last name, and place them on a table on the page using the provided `displayEmployees` function.  Additionally, the function will execute the `displayAverageSalary` function to log the average employee salary to the console, and execute the `getRandomEmployee` function to log a random employees information to the console.
+You can view the live application here: [Employee Payroll Tracker](#)
 
-## Grading Requirements
+---
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Screenshots
 
-This Challenge is graded based on the following criteria:
+### Adding Employees
+![Adding employees prompt](./Assets/03-javascript-homework-demo.gif)
 
-### Technical Acceptance Criteria: 40%
+### Console Output
+![Console output example](./Assets/03-javascript-homework-console-demo.png)
 
-* Satisfies all of the preceding acceptance criteria.
+---
 
-### Deployment: 32%
+## Future Enhancements
 
-* Application deployed at live URL.
+- Add a feature to delete employees from the roster.
+- Implement salary editing directly from the table.
+- Add persistent data storage using Local Storage or a database.
+- Include form-based input for better usability.
 
-* Application loads with no errors.
+---
 
-* Application GitHub URL submitted.
+## License
 
-* GitHub repository that contains application code.
+This project is licensed under the MIT License.
 
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
