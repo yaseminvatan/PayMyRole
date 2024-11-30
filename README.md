@@ -67,10 +67,10 @@ You can view the live application here: [Employee Payroll Tracker](#)
 ## Screenshots
 
 ### Adding Employees
-![Adding employees prompt](./Assets/03-javascript-homework-demo.gif)
+![Adding employees prompt](./Assets/demo.mov)
 
 ### Console Output
-![Console output example](./Assets/03-javascript-homework-console-demo.png)
+![Console output example](./Assets/concoleOutput.png)
 
 ---
 
